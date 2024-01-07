@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Paytone+One&family=Silkscreen&display=swap');
+*{
+    overflow: hidden;
+}
+.facture{
+    background-image: url(./back.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    padding-left: 0px;
+}
+.facture img{
+    margin-top: -70px;
+    height: 702px;
+    width: 1000px;
+    margin-left: -183px !important;
+ 
+
+}
+    .facture h1{
+        margin-top: 200px;
+    
+        margin-left: 0px !important;
+        font-family: Silkscreen ;
+        font-weight: bolder;
+        font-size: 50px;
+        color:  rgb(4, 175, 255);
+
+    }
+    .facture a{
+        font-family: Silkscreen;
+        
+    }
+    .facture a:hover{
+        background:transparent;
+        color: rgb(4, 175, 255) ;
+        border-color: rgb(4, 175, 255) ;
+        
+    }
+    .navbar-brand{
+        font-family: Silkscreen;
+        font-size: 40px;
+        font-weight: bolder;
+        color: rgb(4, 175, 255) ;
+    }
+  

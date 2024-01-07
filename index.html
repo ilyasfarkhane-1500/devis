@@ -1,0 +1,373 @@
+<html lang="en">
+
+<head>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top mb-5">
+    <div class="container-fluid container">
+      <a class="navbar-brand" href="pricipal.html">DEVIS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
+        
+      </div>
+    </div>
+  </nav>
+  <div class="py-5 " style="height: 100%;margin-top: 50px; background-color: hsl(248, 100%, 62%)">
+    <div class="m-1 bg-white" style="height: auto !important">
+      <div class=" row d-flex flex-row flex-container" style="height: 100%">
+        <div class="preview-container col-lg-6">
+          <div class="preview">
+            <span contenteditable="true" class="editable title devis-number" placeholder="Titre de la Facture">Devis
+              N°1</span>
+            <div class="company-info-container">
+              <div>
+                <div class="logo-container">
+                  <div class="placholder" id="drop-area" style="width:  197px;height: 80px;">
+                    <div class="upload">
+                      <img src="upload.jpg" alt="" id="logo-preview" style="width:100%;height: 100%;">
+                      <input type="file" accept="image/*" name="logo" id="file-input" hidden>
+
+                    </div>
+
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="main-info d-flex flex-column">
+                <input type="text" class="editable mb-2 inp-1" placeholder="Le nom de votre société" />
+                <input type="text" class="editable mb-2 inp-1" placeholder="L'adresse du société" />
+                <div class="flx">
+                  <input type="text" class="editable mb-2 inp-1" placeholder="Code Postale" style="width: 120px" />
+                  <input type="text" class="editable inp-1" placeholder="Ville" style="width: 125px; height: 40px" />
+                </div>
+                <div class="flx">
+                  <input type="text" class="mb-2 tl inp-1" value="Téléphone" id="phoneSection" style="
+                        width: 120px;
+                        border: none;
+                        font-weight: bold;
+                        padding-left: 10px;
+                      " />
+
+                  <input type="text" class="editable inp-1" placeholder="0123456789" style="width: 125px; height: 40px"
+                    id="phoneNumber" />
+                  <div class="last">
+                    <i class="bi bi-dash-circle-fill" id="clearPhoneIcon"></i>
+                  </div>
+                </div>
+                <div class="main-info d-flex flex-column rel" id="inputContainer"></div>
+                <div class="add-line">
+                  <i class="bi bi-plus-circle-fill plusi" id="addInputIcon"></i>
+                </div>
+                <div class="client-info-container">
+                  <div class="main-info">
+                    <input type="text" class="editable bold prevent-line-break inp-1" placeholder="Nom du client" />
+                    <input class="editable inp-1" placeholder="Adresse du client" />
+                    <div>
+                      <input class="editable prevent-line-break inp-1" placeholder="Code postal" style="width: 125px" />
+                      <input class="editable prevent-line-break inp-1" placeholder="Ville" style="width: 120px" />
+                    </div>
+                  </div>
+
+                  <div class="info">
+                    <input class="bold prevent-line-break inp-1" value="Téléphone" style="
+                          width: 100px;
+                          border: none;
+                          font-weight: bold;
+                          padding-left: 10px;
+                        " />
+                    <input class="editable prevent-line-break inp-1" placeholder="0123456789" style="width: 150px" />
+                    <div class="last-client">
+                      <i class="bi bi-dash-circle-fill" id="clearPhoneIcon"></i>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column" id="inputContainerClient"></div>
+                  <div class="plus-client">
+                    <i class="bi bi-plus-circle-fill plusi" id="addInputIconClient"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="header-container">
+                <table>
+                  <tbody id="tdTitleCreate">
+                    <tr>
+                      <td class="header-name" style="
+                            background-color: rgb(241, 243, 245);
+                            color: black;
+                          " id="date-devis">
+                        <span class="editable prevent-line-break date-devis" placeholder="Titre">Date du devis
+                        </span>
+                      </td>
+                      <td class="header-value last-tot">
+                        <i class="bi bi-dash-circle-fill" id="clearPhoneIcon"></i>
+                        <span contenteditable="true" class="editable prevent-line-break" placeholder="Contenu">
+                          2023 - 12 - 05
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="plus-tot">
+                  <i class="bi bi-plus-circle-fill plusi" id="addInputIconTot"></i>
+                </div>
+              </div>
+              
+              <div class="table-container disable-table-responsive">
+                <table id="DevTable">
+                  <thead id="tableHead">
+                    <th style="
+                        
+                          color: black;
+                          text-align: center;
+                        ">
+                      Description
+                    </th>
+                    <th style="
+                        text-align: center;
+                          color: black;display: none;
+                        " class="unity">
+                      Unité
+                    </th>
+                    <th style="
+                         text-align: center;
+                          color: black;
+                        " class="quantity q-che">
+                      Quantité
+                    </th>
+                    <th style="
+                         text-align: center;
+                          color: black;
+                        " class="prix-unitaire q-che">
+                      Prix unitaire
+                    </th>
+                    <th style="
+                   text-align: center;
+                    color: black;
+                    display: none;
+                  " class="prix-unitaire  taux-tva-pourcent">
+                      Taux TVA
+                    </th>
+                    <th style="
+                   text-align: center;
+                    color: black;
+                    display: none;
+                  " class="prix-unitaire  taux-tva">
+                      Prix total
+                    </th>
+                    <th style="
+                         text-align: center;
+                          color: black;
+                        ">
+                      Prix total HT
+                    </th>
+
+                  </thead>
+                  <tbody id="tdCreateDev">
+                    <tr class="ligne">
+                      <td class="description">
+                        <span contenteditable="true" class="editable" placeholder="Description">Description</span>
+                        <br />
+                        <span contenteditable="true" class="editable">Description de la prestation</span>
+                      </td>
+                      <td id="quan" class="quanti unity" style="display: none;">
+                        <span contenteditable="true" class="editable prevent-line-break u-che">----</span>
+                      </td>
+                      <td id="quan" class="quanti q-che">
+                       
+                        <input type="text" value="1" class="qty out" style="width: 100px;border: none;text-align: center;"
+                          oninput="updateTotal()">
+                      </td>
+                      <td class="quanti q-che">
+                       
+                        <input type="text" id="pru" class="pun out" value="0.00" style="width:50px;border: none;margin-left: 10px;"
+                          oninput="updateTotal()">
+
+                        <span style="margin-right: 10px;">MAD</span>
+                      </td>
+                      <td class="quanti taux-tva-pourcent " style="display: none;">
+                       
+                        <input type="text" class="out prevent-line-break quanti  taux-tva-pourcent totTvaPo" value="0" style="display: none;border: none;width: 64px;margin-left: 10px;" id="tvaTotVariable" oninput="updateTotal()">
+                        <span style="margin-right: 10px;">%</span>
+                      </td>
+                      <td class="taux-tva" style="display: none;" >
+                        <input value="0.00" type="text" id="TotVariable" class="out pun TotVariable"  style="width: 73px;margin-left: 10px;border: none;"
+                         >
+
+                      <span style="margin-right: 10px;">MAD</span>
+
+                      </td>
+                      <td>
+                        <span id="prixHT" style="padding-right: 20px;">
+                          <input type="text" class="out pht" value="0.00" style="width: 100px;border: none;margin-left: 10px;" readonly>
+                          MAD
+                        </span>
+                        <div class="last-tab">
+                          <i class="bi bi-dash-circle-fill"></i>
+                        </div>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="add-line-tab">
+                  <i class="bi bi-plus-circle-fill" id="addTdIconDev"></i>
+                </div>
+              </div>
+              <div class="recap">
+
+                <table id="totalTable">
+                  <tbody>
+                    
+                    <tr>
+                      <td style="
+                              background-color: rgb(241, 243, 245);
+                            border-color: inherit;
+                            width: 80px;
+                            height: 40px;
+                            border-radius: 5px;
+                            padding-left: 10px;
+                            padding-bottom: 5px;
+                          " class="bas-total" id="bas-total">
+                        Total Ht
+                      </td>
+                      <td class="total" style="border-color: black; padding-left: 50px" >
+                       <input id="totHT" type="text" value="0.00"  class="out totali" style="border: none;width: 100px;"readonly > 
+                       <span class="imptot">MAD</span>
+                      </td>
+                    </tr>
+                    
+  
+                    <tr class="tva-uncheck" style="display: none;">
+                      <td style="
+                            background-color: rgb(241, 243, 245);
+                            border-color: inherit;
+                            width: 106px;
+                            height: 40px;
+                            border-radius: 5px;
+                            padding-left: 10px;
+                            padding-bottom: 5px;
+                          " class="bas-total-0" >
+                        Total TVA(%)
+                      </td>
+                      <td class="total" style="border-color: black; padding-left: 50px" >
+                       <input id="totFin" type="text" value="0.00" class="out"   style="border: none;width: 100px;"readonly > 
+                       <span class="imptot">MAD</span>
+                      </td>
+                    </tr>
+                    <tr class="total-uncheck"  style="display: none;">
+                      <td style="
+                               background-color: rgb(241, 243, 245);
+                            border-color: inherit;
+                            width: 80px;
+                            height: 40px;
+                            border-radius: 5px;
+                            padding-left: 10px;
+                            padding-bottom: 5px;
+                          " class="bas-total" id="bas-total">
+                        Total
+                      </td>
+                      <td class="total" style="border-color: black; padding-left: 50px" >
+                       <input id="to" type="text" value="0.00"  class="out total" style="border: none;width: 100px;"readonly > 
+                       <span class="imptot">MAD</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <div class="extra-info" id="bank">
+                <span contenteditable="true" class="inp-1" style="margin-top: 100px;">Informations complémentaires
+                  (Banque etc..)</span>
+                <div class="last-tab-bank">
+                  <i class="bi bi-dash-circle-fill" id="bankRemove"></i>
+                </div>
+              </div>
+
+
+              <div class="footer" style="width: 783px" id="bas-section">
+                <span contenteditable="true" class="inp-1">Bas de page</span>
+                <div class="last-tab-bas">
+                  <i class="bi bi-dash-circle-fill" id="basRemove"></i>
+                </div>
+              </div>
+
+
+              
+            </div>
+          </div>
+        </div>
+        <div class="panel-container col-lg-6">
+          <div class="panel-sticky">
+            <div class="panel">
+              <span class="title config-titl">Configuration</span>
+              <hr />
+              <div class="panel-item-container">
+                <div class="label">Activer la colonne "Quantité"</div>
+                <div class="content">
+                  <div class="che">
+                    <input type="checkbox" id="flexCheckChecked" class="check-quantity" checked />
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <hr />
+                <div class="panel-item-container">
+                  <div class="label">Taux TVA</div>
+                  <div class="content">
+                    <label class="che">
+                      <input type="checkbox" id="tvaCheck"  />
+                      <span class="checkmark"> </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="panel-item-container d-flex flex-column">
+                <div class="label">Couleur des cases</div>
+                <div class="content ">
+                  <select style="   background-color: rgb(241, 243, 245);
+                  border-color: inherit;border: none;border-radius: 6px;outline: none;" id="colorSelect">
+                    <option value="gray">Gris</option>
+                    <option value="black">Noir</option>
+                    <option value="blue">Bleu</option>
+                    <option value="green">Vert</option>
+                    <option value="orange">Orange</option>
+                    <option value="pink">Rose</option>
+                    <option value="red">Rouge</option>
+                  </select>
+                </div>
+                <div>
+                  <button class="mt-5 btn btn-warning text-white" onclick="getPrint()" id="btoon" >Télécharger et Imprimer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

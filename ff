@@ -1,0 +1,27 @@
+
+<tr class="tva-uncheck" >
+    <td  style="
+        background-color: rgb(241, 243, 245);
+        color: black;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-bottom: 5px;
+      ">
+          Total TVA <span>(%)</span>
+        </td>
+        <td class="total" style="border-color: black; padding-left: 50px">0,00MAD</td>
+      </tr>
+      <tr class="tva-uncheck">
+        <td style="
+        background-color: rgb(241, 243, 245);
+        color: black;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-bottom: 5px;
+      ">Total</td>
+        <td class="total" style="border-color: black; padding-left: 50px">0,00MAD</td>
+      </tr>
